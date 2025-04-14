@@ -9,6 +9,9 @@ export class userEntity {
   @Column()
   email: string;
 
+  @Column()
+  username: string;
+
   @Column({default: ''})
   bio: string;
 
