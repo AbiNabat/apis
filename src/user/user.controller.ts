@@ -3,11 +3,11 @@ import { UserService } from '@app/user/user.service';
 import createUserDto from '@app/user/dto/createuserDto';
 import { userResponseInterface } from '@app/user/types/userResponse.interface';
 import { LoginUserDto } from '@app/user/dto/LoginUserDto';
-import { Request } from 'express';
 import { ExpressRequestInterface } from '@app/types/expressRequest.interface';
 import { User } from '@app/user/decorators/user.decorator';
 import { userEntity } from '@app/user/user.entity';
 import { AuthGuard } from '@app/user/guards/auth.guard';
+import updateUserDto from '@app/user/dto/updateUser.dto';
 
 @Controller()
 export class UserController {
@@ -34,9 +34,7 @@ export class UserController {
   ): Promise<userResponseInterface> {
 
       return this.userService.buildUserResponse(user) ;
-
-
-
   }
 
 }
+
